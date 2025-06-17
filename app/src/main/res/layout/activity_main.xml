@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/welcomescreenhealthtrackerapp"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,7 +15,7 @@
         android:text="Welcome to Healthy Meal Tracker App"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#000ED4"
+        android:textColor="#E7E5DE"
         android:gravity="center"
         android:layout_marginTop="64dp"
         android:layout_marginHorizontal="16dp"
@@ -27,8 +28,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Get Started"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#573BF6"
+        android:textColor="#FFFCFC"
+        android:backgroundTint="#E75347"
         android:layout_marginTop="32dp"
         android:layout_marginHorizontal="64dp"
         app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:text="Exit"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#8CF63B"
+        android:backgroundTint="#60B61F"
         android:layout_marginBottom="32dp"
         android:layout_marginHorizontal="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
