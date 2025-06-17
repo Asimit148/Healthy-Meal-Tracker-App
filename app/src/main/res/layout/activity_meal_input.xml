@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/inputMealDiscription"
+        android:id="@+id/inputMealDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Meal Description"
@@ -44,7 +44,7 @@
         android:backgroundTint="#D1D5DB"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="32dp"
-        app:layout_constraintTop_toBottomOf="@id/inputMealDiscription"
+        app:layout_constraintTop_toBottomOf="@id/inputMealDescription"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

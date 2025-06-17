@@ -9,10 +9,10 @@ import androidx.core.view.WindowInsetsCompat
 class MealInput : AppCompatActivity() {
 
     // Updated list names to match the input fields more clearly
-    private val dayList = arrayListOf<String>()          // Stores day or item name
-    private val categoryList = arrayListOf<String>()     // Stores category (e.g. clothing)
-    private val quantityList = arrayListOf<Int>()        // Stores quantities (e.g. 2)
-    private val commentList = arrayListOf<String>()      // Stores comments (e.g. "For cold weather")
+    private val DescriptionList = arrayListOf<String>() // Stores description of the meal
+    private val TypeList = arrayListOf<String>() // Stores category the meal falls into
+    private val CaloriesList = arrayListOf<Int>() // Stores calories of the meal
+    private val NotesList = arrayListOf<String>() // Stores notes.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,22 +20,13 @@ class MealInput : AppCompatActivity() {
         setContentView(R.layout.activity_input)
 
         // Link UI elements to Kotlin variables using exact XML IDs
-        val inputDay = findViewById<EditText>(R.id.inputDay)
-        val inputMorning = findViewById<EditText>(R.id.inputMorning)
-        val inputAfternoon = findViewById<EditText>(R.id.inputAfternoon)
-        val inputActivityNotes = findViewById<EditText>(R.id.inputActivityNotes)
-
-        val buttonAdd = findViewById<Button>(R.id.buttonAdd)
-        val buttonView = findViewById<Button>(R.id.buttonView)
-        val buttonExit = findViewById<Button>(R.id.buttonExit)
-        val buttonClear = findViewById<Button>(R.id.buttonClear)
-
+       val inputMealDescripton= findViewById<EditText>(R.id.inputMealDescription)
         // Add to list button
         buttonAdd.setOnClickListener {
-            val day = inputDay.text.toString()
-            val category = inputMorning.text.toString()
-            val quantityStr = inputAfternoon.text.toString()
-            val comment = inputActivityNotes.text.toString()
+            val Description = inputMealDiscription.text.toString()
+            val Type = inputMealType.text.toString()
+            val Calories = inputCalories.text.toString()
+            val Notes = inputNotesList.text.toString()
 
             // Validate input
             if (day.isBlank() || category.isBlank() || quantityStr.isBlank()) {
@@ -50,27 +41,27 @@ class MealInput : AppCompatActivity() {
             }
 
             // Add values to lists
-            dayList.add(day)
+            descriptionList.add(description)
+            typeList.add(type)
             categoryList.add(category)
-            quantityList.add(quantity)
-            commentList.add(comment)
+            notesList.add(notes)
 
-            Toast.makeText(this, "Item added to the list", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Meal added to the list", Toast.LENGTH_SHORT).show()
 
             // Clear input fields
-            inputDay.text.clear()
-            inputMorning.text.clear()
-            inputAfternoon.text.clear()
+            inputMealDiscription.text.clear()
+            inputMealType.text.clear()
+            inputCalories.text.clear()
             inputActivityNotes.text.clear()
         }
 
         // View list button
         buttonView.setOnClickListener {
             val intent = Intent(this, ActivityDisplay::class.java)
-            intent.putStringArrayListExtra("dayList", dayList)
+            intent.putStringArrayListExtra("descriptionList", descriptionList)
+            intent.putStringArrayListExtra("typeList", typeList)
             intent.putStringArrayListExtra("categoryList", categoryList)
-            intent.putIntegerArrayListExtra("quantityList", quantityList)
-            intent.putStringArrayListExtra("commentList", commentList)
+            intent.putStringArrayListExtra("notesList", notesList)
             startActivity(intent)
         }
 
