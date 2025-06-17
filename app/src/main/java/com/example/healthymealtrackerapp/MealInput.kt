@@ -1,10 +1,11 @@
 package com.example.healthymealtrackerapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MealInput : AppCompatActivity() {
 
@@ -15,13 +16,13 @@ class MealInput : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_input)
+        setContentView(R.layout.activity_meal_input)
 
-        // Link all input fields
+        // Link input fields
         val inputMealDescription = findViewById<EditText>(R.id.inputMealDescription)
         val inputMealType = findViewById<EditText>(R.id.inputMealType)
         val inputCalories = findViewById<EditText>(R.id.inputCalories)
-        val inputNotes = findViewById<EditText>(R.id.inputNotes)
+        val inputMealNotes = findViewById<EditText>(R.id.inputMealNotes)
 
         // Link buttons
         val buttonAdd = findViewById<Button>(R.id.buttonAdd)
@@ -31,13 +32,12 @@ class MealInput : AppCompatActivity() {
 
         // Add to list
         buttonAdd.setOnClickListener {
-            val description = inputMealDescription.text.toString()
-            val type = inputMealType.text.toString()
-            val caloriesStr = inputCalories.text.toString()
-            val notes = inputNotes.text.toString()
+            val description = inputMealDescription.text.toString().trim()
+            val type = inputMealType.text.toString().trim()
+            val caloriesStr = inputCalories.text.toString().trim()
+            val notes = inputMealNotes.text.toString().trim()
 
-            // Input validation
-            if (description.isBlank() || type.isBlank() || caloriesStr.isBlank()) {
+            if (description.isEmpty() || type.isEmpty() || caloriesStr.isEmpty()) {
                 Toast.makeText(this, "Please fill in all required fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -48,7 +48,6 @@ class MealInput : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Add to lists
             descriptionList.add(description)
             typeList.add(type)
             caloriesList.add(calories)
@@ -56,20 +55,19 @@ class MealInput : AppCompatActivity() {
 
             Toast.makeText(this, "Meal added to the list", Toast.LENGTH_SHORT).show()
 
-            // Clear inputs
             inputMealDescription.text.clear()
             inputMealType.text.clear()
             inputCalories.text.clear()
-            inputNotes.text.clear()
+            inputMealNotes.text.clear()
         }
 
         // View list
         buttonView.setOnClickListener {
-            val intent = Intent(this, MealViewer::class.java)
-            intent.putStringArrayListExtra("descriptionList", descriptionList)
-            intent.putStringArrayListExtra("typeList", typeList)
+            val intent = Intent(this, MealView::class.java)
+            intent.putStringArrayListExtra("descriptionList", ArrayList(descriptionList))
+            intent.putStringArrayListExtra("typeList", ArrayList(typeList))
             intent.putIntegerArrayListExtra("caloriesList", ArrayList(caloriesList))
-            intent.putStringArrayListExtra("notesList", notesList)
+            intent.putStringArrayListExtra("notesList", ArrayList(notesList))
             startActivity(intent)
         }
 
@@ -78,7 +76,7 @@ class MealInput : AppCompatActivity() {
             inputMealDescription.text.clear()
             inputMealType.text.clear()
             inputCalories.text.clear()
-            inputNotes.text.clear()
+            inputMealNotes.text.clear()
             Toast.makeText(this, "Inputs cleared!", Toast.LENGTH_SHORT).show()
         }
 

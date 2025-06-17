@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/inputActivityNotes"
+        android:id="@+id/inputMealNotes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Meal Notes"
@@ -84,7 +84,7 @@
         android:backgroundTint="#10B981"
         android:layout_marginTop="24dp"
         android:layout_marginHorizontal="64dp"
-        app:layout_constraintTop_toBottomOf="@id/inputActivityNotes"
+        app:layout_constraintTop_toBottomOf="@id/inputMealNotes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
