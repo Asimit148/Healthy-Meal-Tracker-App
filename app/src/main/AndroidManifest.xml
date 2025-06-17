@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HealthyMealTrackerApp"
         tools:targetApi="31">
         <activity
+            android:name=".MealView"
+            android:exported="false" />
+        <activity
             android:name=".MealInput"
             android:exported="false" />
         <activity
