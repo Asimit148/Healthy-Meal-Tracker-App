@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/inputDay"
+        android:id="@+id/inputMealDiscription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Meal Description"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/inputMorning"
+        android:id="@+id/inputMealType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Meal Type "
@@ -44,12 +44,12 @@
         android:backgroundTint="#D1D5DB"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="32dp"
-        app:layout_constraintTop_toBottomOf="@id/inputDay"
+        app:layout_constraintTop_toBottomOf="@id/inputMealDiscription"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/inputAfternoon"
+        android:id="@+id/inputCalories"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Calories"
@@ -58,7 +58,7 @@
         android:backgroundTint="#D1D5DB"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="32dp"
-        app:layout_constraintTop_toBottomOf="@id/inputMorning"
+        app:layout_constraintTop_toBottomOf="@id/inputMealType"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -71,7 +71,7 @@
         android:backgroundTint="#D1D5DB"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="32dp"
-        app:layout_constraintTop_toBottomOf="@id/inputAfternoon"
+        app:layout_constraintTop_toBottomOf="@id/inputCalories"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
