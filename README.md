@@ -22,7 +22,8 @@ This app is designed to help users track their meal intake, categorize meals by 
   - **Get Started** – Navigates to the Meal Input Screen.
   - **Exit App** – Closes the application.
 
-![Welcome Screen](screenshots/welcome_screen.png)
+![Welcome Screen]![image](https://github.com/user-attachments/assets/d092ad54-1e0d-4585-a0d7-e1d433dcd9bd)
+
 
 ---
 
@@ -38,7 +39,11 @@ This app is designed to help users track their meal intake, categorize meals by 
   - **Clear Contents** – Clears all EditText fields.
   - **Exit App** – Closes the app.
 
-![Meal Input Screen](screenshots/input_screen.png)
+![Meal Input Screen]![image](https://github.com/user-attachments/assets/21cbf14e-e462-4034-b1c6-30cda9a2d2c0)![image](https://github.com/user-attachments/assets/f9a72ff2-f909-4877-a624-d87e996c3c05) ![image](https://github.com/user-attachments/assets/d9aaa21c-c0db-4009-91ba-5fd530cb3f67)
+
+
+
+
 
 ---
 
@@ -49,7 +54,8 @@ This app is designed to help users track their meal intake, categorize meals by 
   - **Show Meals with Calories > 300** – Filters and shows only meals with 300+ calories.
   - **Back to Home Screen** – Returns to the input screen.
 
-![Meal View Screen](screenshots/display_screen.png)
+![image](https://github.com/user-attachments/assets/2b11828d-7884-44e1-818e-df2385b2ed8e)![image](https://github.com/user-attachments/assets/0565f577-5e26-4586-abdd-943420279f06)
+
 
 ---
 
