@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mealinputscreen"
     tools:context=".MealInput">
 
     <TextView
@@ -14,7 +15,7 @@
         android:text="Fill in the contents"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#BA750E"
+        android:textColor="#F4DF8E"
         android:gravity="center"
         android:layout_marginTop="24dp"
         android:layout_marginHorizontal="16dp"

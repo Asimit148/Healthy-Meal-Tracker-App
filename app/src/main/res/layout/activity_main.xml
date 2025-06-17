@@ -15,7 +15,7 @@
         android:text="Welcome to Healthy Meal Tracker App"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#E7E5DE"
+        android:textColor="#EDC236"
         android:gravity="center"
         android:layout_marginTop="64dp"
         android:layout_marginHorizontal="16dp"
