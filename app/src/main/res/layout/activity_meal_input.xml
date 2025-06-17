@@ -80,27 +80,27 @@
         android:id="@+id/buttonAdd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3BBF41"
         android:text="Add to Meal Log"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#12B180"
-        android:layout_marginTop="24dp"
-        android:layout_marginHorizontal="64dp"
-        app:layout_constraintTop_toBottomOf="@id/inputMealNotes"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/inputMealNotes" />
 
     <Button
         android:id="@+id/buttonView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#D1C60F"
         android:text="Go to Meal viewer Screen"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#3B82F6"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="64dp"
-        app:layout_constraintTop_toBottomOf="@id/buttonAdd"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/buttonAdd" />
 
     <Button
         android:id="@+id/buttonClear"
@@ -119,15 +119,15 @@
         android:id="@+id/buttonExit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Exit App"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#EF4444"
+        android:layout_marginHorizontal="64dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
-        android:layout_marginHorizontal="64dp"
-        app:layout_constraintTop_toBottomOf="@id/buttonClear"
+        android:backgroundTint="#C70D0D"
+        android:text="Exit App"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/buttonClear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
